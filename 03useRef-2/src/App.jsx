@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useState,useRef } from "react";
 
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const inputRef =useRef()
+  
+  console.log(inputRef.current)
 
   return (
     <>
-      <h1>Chris</h1>
+    <input type="text" ref={inputRef}/>
+    <button onClick={()=>{inputRef.current.style.background = "yellow"}}>Click Me</button>
     </>
   );
 }
