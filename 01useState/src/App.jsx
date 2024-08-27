@@ -1,20 +1,17 @@
 import { useState } from 'react'
 import './App.css'
+import { Count } from './tutorials/Count'
+// import ChangeColor01 from './tutorials/ChangeColor01'
+// import { Car } from './tutorials/Car'
+
 
 function App() {
-  const [color, setColor] = useState("red")
-  
 
-  const changeColor =() =>{
-    let color ="blue";
-    setColor(color)
-  }
 
 
   return (
    <>
-   <h1>My favourite color is {color}</h1>
-   <button onClick={changeColor}>Color</button>
+   <Count/>
    </>
   )
 }
